@@ -130,12 +130,16 @@ ul { list-style: none; }
   flex-shrink: 0;
 }
 .logo-icon {
-  width: 44px; height: 44px;
+  width: 48px; height: 48px;
   border-radius: var(--radius-sm);
-  background: linear-gradient(135deg, var(--teal) 0%, #1a9990 100%);
+  background: #fff;
+  border: 1.5px solid var(--gray);
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
 }
+.logo-icon img { width: 44px; height: 44px; object-fit: contain; border-radius: 8px; }
 .logo-icon svg { width: 26px; height: 26px; }
 .logo-text strong {
   display: block;

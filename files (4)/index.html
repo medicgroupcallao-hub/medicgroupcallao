@@ -150,9 +150,20 @@
       <h2 class="section-title reveal delay-1">&iquest;C&oacute;mo <span class="accent">llegar</span> a nosotros?</h2>
     </div>
     <div class="ubicacion-grid">
-      <div style="border-radius:16px; overflow:hidden; margin-bottom:40px; box-shadow:0 8px 32px rgba(11,45,64,.12);">
-  <img src="local.jpg" alt="Local MG Medical Group Callao" style="width:100%; height:320px; object-fit:cover; display:block;">
-     </div>
+      <div class="ubi-slider" style="border-radius:16px; overflow:hidden; margin-bottom:40px; box-shadow:0 8px 32px rgba(11,45,64,.12); position:relative;">
+  <div class="ubi-slider-track" id="ubiTrack" style="display:flex; transition:transform 0.5s ease;">
+    <div style="min-width:100%; height:360px;">
+      <img src="local.jpg" alt="Local MG Medical Group" style="width:100%; height:100%; object-fit:cover; display:block;">
+    </div>
+    <div style="min-width:100%; height:360px;">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.5782!2d-77.0945!3d-12.0758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sCalle+Quiquijana+253,+San+Miguel,+Lima,+Peru!5e0!3m2!1ses!2spe!4v1699000000000!5m2!1ses!2spe" width="100%" height="100%" style="border:0; display:block;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </div>
+  <div style="position:absolute; bottom:12px; left:50%; transform:translateX(-50%); display:flex; gap:8px;">
+    <span onclick="ubiSlide(0)" id="ubiDot0" style="width:10px;height:10px;border-radius:50%;background:#2ABFAF;cursor:pointer;display:block;"></span>
+    <span onclick="ubiSlide(1)" id="ubiDot1" style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.6);cursor:pointer;display:block;"></span>
+  </div>
+</div>
       <div class="ubicacion-info reveal-left">
         <div class="ubicacion-detail-card">
           <div class="ubi-item">
@@ -194,17 +205,6 @@
             Consultar por WhatsApp
           </a>
         </div>
-      </div>
-      <div class="ubicacion-mapa reveal-right">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.5782!2d-77.0945!3d-12.0758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sCalle+Quiquijana+253,+San+Miguel,+Lima,+Peru!5e0!3m2!1ses!2spe!4v1699000000000!5m2!1ses!2spe"
-          width="100%"
-          height="100%"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          title="Ubicaci&oacute;n MG Medical Group Per&uacute;">
-        </iframe>
       </div>
     </div>
   </div>
@@ -836,6 +836,16 @@ dots.forEach(function(d, i) {
   d.addEventListener('click', function() { goToSlide(i); });
 });
 setInterval(function() { goToSlide(sliderIndex + 1); }, 3500);
+
+  /* Slider ubicación */
+var ubiIndex = 0;
+function ubiSlide(n) {
+  ubiIndex = n;
+  document.getElementById('ubiTrack').style.transform = 'translateX(-' + (n * 100) + '%)';
+  document.getElementById('ubiDot0').style.background = n === 0 ? '#2ABFAF' : 'rgba(255,255,255,.6)';
+  document.getElementById('ubiDot1').style.background = n === 1 ? '#2ABFAF' : 'rgba(255,255,255,.6)';
+}
+setInterval(function(){ ubiSlide(ubiIndex === 0 ? 1 : 0); }, 4000);
 </script>
 </body>
 </html>

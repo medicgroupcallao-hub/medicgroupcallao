@@ -1,0 +1,245 @@
+/* ============================================================
+   MG MEDICAL GROUP — animations.css
+   Keyframes + scroll reveals + micro-interactions
+   ============================================================ */
+
+/* ── Keyframes ─────────────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(36px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideRight {
+  from { opacity: 0; transform: translateX(-40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideLeft {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.90); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pulseRing {
+  0%   { box-shadow: 0 0 0 0 rgba(42,191,175,.45); }
+  70%  { box-shadow: 0 0 0 14px rgba(42,191,175,0); }
+  100% { box-shadow: 0 0 0 0 rgba(42,191,175,0); }
+}
+
+@keyframes lineExpand {
+  from { width: 0; }
+  to   { width: 40px; }
+}
+
+@keyframes navbarSlide {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Page load ─────────────────────────────────────────────── */
+.nav-wrapper   { animation: navbarSlide 0.5s ease both; }
+.hero-text-col { animation: slideRight 0.8s 0.2s ease both; }
+.hero-img-col  { animation: slideLeft  0.8s 0.3s ease both; }
+
+/* ── Scroll reveal base ────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ── Stagger delays ────────────────────────────────────────── */
+.delay-1 { transition-delay: 0.10s !important; }
+.delay-2 { transition-delay: 0.20s !important; }
+.delay-3 { transition-delay: 0.30s !important; }
+.delay-4 { transition-delay: 0.40s !important; }
+.delay-5 { transition-delay: 0.50s !important; }
+
+/* ── Navbar scroll shrink ──────────────────────────────────── */
+.navbar { transition: padding 0.3s ease, box-shadow 0.3s ease; }
+.navbar.scrolled {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  box-shadow: 0 4px 24px rgba(11,45,64,.10) !important;
+}
+
+/* ── Buttons ────────────────────────────────────────────────── */
+.btn-primary {
+  transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(42,191,175,.40);
+}
+.btn-primary:active { transform: translateY(0); }
+
+.btn-whatsapp {
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+.btn-whatsapp:hover {
+  transform: translateY(-2px);
+  background: #1db954 !important;
+}
+
+.btn-outline {
+  transition: all 0.25s ease;
+}
+.btn-outline:hover {
+  background: var(--teal) !important;
+  color: #fff !important;
+  transform: translateY(-2px);
+}
+
+/* ── Specialty cards ────────────────────────────────────────── */
+.spec-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.spec-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 48px rgba(42,191,175,.18);
+}
+.spec-card img { transition: transform 0.4s ease; }
+.spec-card:hover img { transform: scale(1.04); }
+
+/* ── Professional cards ─────────────────────────────────────── */
+.prof-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.prof-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(11,45,64,.12);
+}
+.prof-btn {
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+/* ── Razon cards ────────────────────────────────────────────── */
+.razon-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.razon-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(42,191,175,.14);
+  border-color: var(--teal) !important;
+}
+.razon-icon {
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.razon-card:hover .razon-icon {
+  background: var(--teal) !important;
+  color: #fff !important;
+  transform: scale(1.08);
+}
+
+/* ── Step cards ─────────────────────────────────────────────── */
+.step-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.step-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(42,191,175,.14);
+  border-color: var(--teal) !important;
+}
+.step-icon { transition: background 0.3s ease, transform 0.3s ease; }
+.step-card:hover .step-icon {
+  background: var(--teal) !important;
+  color: #fff !important;
+  transform: scale(1.1);
+}
+
+/* ── Nav links ──────────────────────────────────────────────── */
+.nav-link {
+  position: relative;
+  transition: color 0.25s ease;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px; left: 50%;
+  width: 0; height: 2px;
+  background: var(--teal);
+  border-radius: 2px;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+.nav-link:hover::after { width: 100%; left: 0; }
+.nav-link:hover { color: var(--teal) !important; }
+
+/* ── Pulse on CTA phone ─────────────────────────────────────── */
+.btn-phone { animation: pulseRing 2.4s ease infinite; }
+
+/* ── Section label line ─────────────────────────────────────── */
+.section-label .label-line {
+  display: inline-block;
+  width: 0;
+  height: 2px;
+  background: var(--teal);
+  vertical-align: middle;
+  margin-right: 10px;
+  border-radius: 2px;
+  transition: width 0.6s ease;
+}
+.section-label.visible .label-line { width: 40px; }
+
+/* ── Form inputs ────────────────────────────────────────────── */
+.form-input { transition: border-color 0.25s ease, box-shadow 0.25s ease; }
+.form-input:focus {
+  border-color: var(--teal) !important;
+  box-shadow: 0 0 0 3px rgba(42,191,175,.15);
+  outline: none;
+}
+
+/* ── Tag chips ──────────────────────────────────────────────── */
+.tag-chip {
+  transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
+}
+.tag-chip:hover {
+  background: var(--teal) !important;
+  color: #fff !important;
+  transform: translateY(-2px);
+}
+
+/* ── Logo hover ─────────────────────────────────────────────── */
+.logo-mark { transition: transform 0.3s ease; }
+.logo-mark:hover { transform: scale(1.06); }
+
+/* ── Mobile menu ────────────────────────────────────────────── */
+.mobile-nav {
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+.mobile-nav.open { max-height: 500px; }

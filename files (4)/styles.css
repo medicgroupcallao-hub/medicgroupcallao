@@ -504,6 +504,16 @@ ul { list-style: none; }
   flex-direction: column;
   flex: 1;
 }
+.prof-avatar-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  margin: 0 auto 16px;
+  border: 3px solid var(--teal-mid);
+}
 .prof-avatar-initials {
   width: 52px; height: 52px;
   border-radius: 50%;

@@ -1320,7 +1320,7 @@ textarea.form-input { resize: vertical; min-height: 110px; }
   .hero              { padding-top: 64px; padding-bottom: 56px; }
   .hero-grid         { grid-template-columns: 1fr; gap: 32px; }
   .hero-img-col      { order: -1; }
-  .hero-img-wrap     { max-height: 340px; aspect-ratio: 16/9; }
+  .hero-img-wrap     { max-height: 480px; aspect-ratio: 3/4; }
   .hero-desc         { max-width: 100%; font-size: 16px; margin-bottom: 24px; }
   .hero-stats        { gap: 20px; padding-top: 24px; }
   .hero-tags         { gap: 8px; margin-bottom: 28px; }
@@ -1390,7 +1390,7 @@ textarea.form-input { resize: vertical; min-height: 110px; }
   /* Hero */
   .hero              { padding-top: 48px; padding-bottom: 48px; }
   .hero-label        { font-size: 10.5px; padding: 6px 14px; }
-  .hero-img-wrap     { max-height: 280px; }
+  .hero-img-wrap     { max-height: 420px; aspect-ratio: 3/4; }
   .stat-number       { font-size: 28px; }
 
   /* Profesionales: 1 columna desde 576px */

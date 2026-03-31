@@ -111,7 +111,7 @@ ul { list-style: none; }
   background: rgba(255,255,255,.97);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  padding: 14px 0;
+  padding: 8px 0;
   border-bottom: 1px solid rgba(42,191,175,.12);
   transition: box-shadow var(--transition);
 }
@@ -130,7 +130,7 @@ ul { list-style: none; }
   flex-shrink: 0;
 }
 .logo-icon {
-  width: 64px; height: 64px;
+  width: 90px; height: 90px;
   border-radius: var(--radius-sm);
   background: #fff;
   border: 1.5px solid var(--gray);

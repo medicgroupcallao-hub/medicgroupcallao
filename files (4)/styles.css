@@ -1297,10 +1297,10 @@ textarea.form-input { resize: vertical; min-height: 110px; }
   .section-header { margin-bottom: 40px; }
 
   /* Hero */
-  .hero              { padding-top: 64px; padding-bottom: 56px; }
-  .hero-grid         { grid-template-columns: 1fr; gap: 32px; }
-  .hero-img-col      { order: -1; }
-  .hero-img-wrap     { max-height: 480px; aspect-ratio: 3/4; }
+.hero              { padding-top: 32px; padding-bottom: 40px; }
+.hero-grid         { grid-template-columns: 1fr; gap: 16px; }
+.hero-img-col      { order: -1; }
+.hero-img-col img  { max-width: 260px; margin: 0 auto; display: block; }
   .hero-desc         { max-width: 100%; font-size: 16px; margin-bottom: 24px; }
   .hero-stats        { gap: 20px; padding-top: 24px; }
   .hero-tags         { gap: 8px; margin-bottom: 28px; }
@@ -1368,9 +1368,9 @@ textarea.form-input { resize: vertical; min-height: 110px; }
   .productos    { padding: 56px 0; }
 
   /* Hero */
-  .hero              { padding-top: 48px; padding-bottom: 48px; }
-  .hero-label        { font-size: 10.5px; padding: 6px 14px; }
-  .hero-img-wrap     { max-height: 420px; aspect-ratio: 3/4; }
+.hero              { padding-top: 28px; padding-bottom: 36px; }
+.hero-label        { font-size: 10.5px; padding: 6px 14px; white-space: nowrap; }
+.hero-img-col img  { max-width: 240px; margin: 0 auto; display: block; }
   .stat-number       { font-size: 28px; }
 
   /* Profesionales: 1 columna desde 576px */
@@ -1414,8 +1414,8 @@ textarea.form-input { resize: vertical; min-height: 110px; }
 /* ── 480px — Móviles pequeños ─────────────────────────────── */
 @media (max-width: 480px) {
   .hero-stats        { flex-direction: column; gap: 14px; }
-  .hero-img-wrap     { max-height: 240px; }
-
+ .hero-img-col img  { max-width: 200px; margin: 0 auto; display: block; }
+   
   /* Navbar */
   .logo-text strong  { font-size: 13px; }
   .logo-text span    { font-size: 9px; }

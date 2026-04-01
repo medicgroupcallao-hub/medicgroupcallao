@@ -1311,6 +1311,9 @@ textarea.form-input { resize: vertical; min-height: 110px; }
 .hero              { padding-top: 32px; padding-bottom: 40px; }
 .hero-grid         { grid-template-columns: 1fr; gap: 16px; }
 .hero-img-col      { order: -1; }
+.hero-text-col     { text-align: center; }
+.hero-tags         { justify-content: center; }
+.hero-label        { margin-left: auto; margin-right: auto; }
 .hero-img-col img  { max-width: 260px; margin: 0 auto; display: block; }
   .hero-desc         { max-width: 100%; font-size: 16px; margin-bottom: 24px; }
   .hero-stats        { gap: 20px; padding-top: 24px; }
@@ -1424,7 +1427,7 @@ textarea.form-input { resize: vertical; min-height: 110px; }
 
 /* ── 480px — Móviles pequeños ─────────────────────────────── */
 @media (max-width: 480px) {
-  .hero-stats        { flex-direction: column; gap: 14px; }
+  .hero-stats        { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 12px 32px; }
  .hero-img-col img  { max-width: 200px; margin: 0 auto; display: block; }
    
   /* Navbar */

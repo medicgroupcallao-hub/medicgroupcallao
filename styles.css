@@ -1496,27 +1496,32 @@ textarea.form-input { resize: vertical; min-height: 110px; }
   transform: scale(1.3);
 }
 
-/* ===== HERO RESPONSIVE (móvil) ===== */
 @media (max-width: 768px) {
 
   .hero-grid {
-    display: flex;
-    flex-direction: column;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center;
   }
 
   .hero-text-col {
     order: 1;
+    text-align: center;
   }
 
   .hero-img-col {
     order: 2;
-    margin-top: 20px;
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
   }
 
   .hero-img-col img {
-    max-width: 80%;
-    margin: auto;
+    width: 70%;
+    max-width: 280px;
+    height: auto;
     display: block;
+    margin: 0 auto;
   }
 
 }
